@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Session | Home &amp; About</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FFFFFF",
+                        "accent-grey": "#666666",
+                        "industrial-light": "#D1D5DB",
+                        "background-dark": "#000000",
+                        "deep-grey": "#111111",
+                        "muted-grey": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        none: "0",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            h1, h2, h3, h4 {
+                @apply font-black tracking-tighter uppercase;
+            }
+            body {
+                @apply bg-black text-white antialiased overflow-x-hidden;
+            }
+        }
+        .hero-gritty {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%) contrast(110%);
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .text-huge {
+            font-size: clamp(4rem, 15vw, 12rem);
+            line-height: 0.85;
+        }
+        .nav-link {
+            @apply relative overflow-hidden transition-all duration-300 hover:opacity-70;
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+<div class="grain-overlay fixed inset-0 z-[100]"></div>
+<nav class="fixed w-full z-[80] top-0 bg-black/80 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+<div class="flex flex-col">
+<a class="text-3xl font-black tracking-tighter leading-none" href="index.html">THE SESSION</a>
+<span class="text-[9px] font-bold tracking-[0.4em] uppercase text-accent-grey">Born and Bred Coventry</span>
+</div>
+<div class="hidden md:flex space-x-12 font-black uppercase text-xs tracking-[0.25em]">
+<a class="nav-link border-b-2 border-white pb-1" href="index.html">HOME</a>
+<a class="nav-link border-b-2 border-transparent pb-1" href="index.html#about">ABOUT</a>
+<a class="nav-link border-b-2 border-transparent pb-1" href="shows-code.html">MUSIC</a>
+<a class="nav-link border-b-2 border-transparent pb-1" href="shows-code.html#gigs">SHOWS</a>
+<a class="nav-link border-b-2 border-transparent pb-1" href="booking-code.html">BOOKING</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<header class="hero-gritty min-h-screen flex items-center justify-center text-center px-6 relative" id="home">
+<div class="max-w-6xl w-full pt-24">
+<div class="inline-block border-2 border-white px-6 py-2 mb-10">
+<h2 class="text-white font-black text-sm md:text-xl tracking-[0.4em]">BORN AND BRED COVENTRY</h2>
+</div>
+<h1 class="text-huge font-black mb-16">
+                THE<br/>SESSION
+            </h1>
+<div class="flex flex-col sm:flex-row gap-0 justify-center">
+<a class="bg-white text-black px-12 py-7 font-black text-xl hover:bg-industrial-light transition-all uppercase tracking-tighter border-2 border-white" href="#booking">
+                    BOOK THE BAND
+                </a>
+<a class="bg-transparent text-white px-12 py-7 font-black text-xl hover:bg-white hover:text-black transition-all uppercase tracking-tighter border-2 border-white sm:border-l-0" href="#">
+                    LATEST TRACKS
+                </a>
+</div>
+</div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-50">
+<span class="material-symbols-outlined text-4xl animate-bounce">expand_more</span>
+</div>
+</header>
+<section class="py-32 bg-background-dark relative border-t border-white/5" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 relative">
+<img alt="The Session Live Performance" class="grayscale contrast-125 brightness-75 object-cover w-full h-[750px] border border-white/10" src="band-photo.jpg"/>
+<div class="absolute -bottom-6 -left-6 bg-white text-black p-12 hidden md:block">
+<p class="font-black text-8xl leading-none">400+</p>
+<p class="font-black uppercase tracking-widest text-sm mt-3 border-t-4 border-black pt-3">LIVE SHOWS COMPLETED</p>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-12 lg:pl-6">
+<div class="space-y-6">
+<span class="inline-block bg-white text-black px-4 py-1 font-black tracking-widest uppercase text-xs">ESTABLISHED 2002</span>
+<h2 class="text-6xl md:text-8xl font-black leading-[0.85]">RAW<br/>MIDLANDS<br/>ENERGY</h2>
+</div>
+<div class="space-y-8 text-xl text-industrial-light font-medium leading-relaxed">
+<p>
+                            Born and bred in the concrete heart of Coventry. The Session is a pure, unadulterated original sound forged through two decades of grit.
+                        </p>
+<p class="text-accent-grey border-l-4 border-accent-grey/30 pl-6">
+                            Led by the powerhouse vocals of siblings Dean and Sheryl, we trade in the currency of honest stories and industrial-strength melodies.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-12 pt-8 border-t border-white/10">
+<div>
+<span class="block text-6xl font-black">20YRS</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-accent-grey font-black">Rock Heritage</span>
+</div>
+<div>
+<span class="block text-6xl font-black">06</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-accent-grey font-black">Studio Albums</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-muted-grey border-y border-white/5" id="members">
+<div class="max-w-7xl mx-auto px-6 mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<h2 class="text-7xl md:text-9xl font-black leading-none">THE<br/>LINEUP</h2>
+<div class="max-w-xs text-right border-r-4 border-white pr-6 py-2">
+<p class="text-white font-black uppercase tracking-widest text-sm mb-1">THE CORE FOUNDATION</p>
+<p class="text-accent-grey font-bold uppercase tracking-tighter text-xs italic">Built on blood and volume since the beginning.</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-black border border-white/5 group">
+<div class="aspect-[4/5] overflow-hidden grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-700">
+<img alt="Dean Jackson - Vocals" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="band-member-3.png"/>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-black mb-1">SHERYL</h4>
+<p class="text-accent-grey text-[10px] font-black uppercase tracking-[0.25em]">Lead Vocals</p>
+</div>
+</div>
+<div class="bg-black border border-white/5 group">
+<div class="aspect-[4/5] overflow-hidden grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-700">
+<img alt="Sheryl - Vocals" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="band-member-4.png"/>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-black mb-1">DEAN</h4>
+<p class="text-accent-grey text-[10px] font-black uppercase tracking-[0.25em]">Vocals • Acoustic Guitar</p>
+</div>
+</div>
+<div class="bg-black border border-white/5 group">
+<div class="aspect-[4/5] overflow-hidden grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-700">
+<img alt="Lead Guitarist" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="mark-boorman.png"/>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-black mb-1">MARK</h4>
+<p class="text-accent-grey text-[10px] font-black uppercase tracking-[0.25em]">Guitar</p>
+</div>
+</div>
+<div class="bg-black border border-white/5 group">
+<div class="aspect-[4/5] overflow-hidden grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-700">
+<img alt="Drums and Bass" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="band-member-1.png"/>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-black mb-1">DAVE</h4>
+<p class="text-accent-grey text-[10px] font-black uppercase tracking-[0.25em]">Bass</p>
+</div>
+</div>
+<div class="bg-black border border-white/5 group">
+<div class="aspect-[4/5] overflow-hidden grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-700">
+<img alt="5th Member" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="band-member-2.png"/>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-black mb-1">BONGO</h4>
+<p class="text-accent-grey text-[10px] font-black uppercase tracking-[0.25em]">Drums</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-48 bg-white text-black text-center" id="booking">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-7xl md:text-[11rem] font-black leading-none mb-16 tracking-tighter">SECURE THE<br/>SESSION.</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="bg-black text-white px-20 py-8 font-black text-3xl hover:bg-neutral-800 transition-all uppercase tracking-tighter border-4 border-black" href="/cdn-cgi/l/email-protection#95f7fafafefcfbf2d5e1fdf0e6f0e6e6fcfafbf7f4fbf1bbf6faf8">
+                    ENQUIRE NOW
+                </a>
+</div>
+<p class="mt-16 text-black/40 font-black uppercase tracking-[0.4em] text-sm">FESTIVALS • CONCERT HALLS • PRIVATE TOURS</p>
+</div>
+</section>
+<footer class="py-32 bg-black border-t border-white/10 relative z-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-16 items-start">
+<div class="md:col-span-2">
+<div class="flex flex-col mb-8">
+<span class="text-4xl font-black tracking-tighter leading-none">THE SESSION</span>
+<span class="text-[10px] font-black tracking-[0.5em] uppercase text-white mt-2">BORN AND BRED COVENTRY</span>
+</div>
+<p class="text-accent-grey text-sm font-bold tracking-widest uppercase leading-relaxed max-w-sm">
+                        Original Irish Rock forged in the Midlands since 2002. Authenticity at high volume.
+                    </p>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-white font-black text-sm tracking-[0.3em]">NAVIGATE</span>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#home">Home</a>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#about">About</a>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Music</a>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#booking">Booking</a>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-white font-black text-sm tracking-[0.3em]">RESOURCES</span>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Press Kit</a>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Technical Rider</a>
+<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Privacy</a>
+</div>
+</div>
+<div class="mt-32 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-accent-grey text-[10px] uppercase font-black tracking-[0.3em]">
+                    © 2024 THE SESSION BAND. ALL RIGHTS RESERVED.
+                </p>
+<div class="flex space-x-8">
+<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://www.instagram.com/_thesession/">Instagram</a>
+<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://www.facebook.com/THESESSION/?locale=en_GB">Facebook</a>
+<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://open.spotify.com/artist/3jqvrt1w1FE5AfcHAr6qJ5?si=3JA9baSgThylGwRJCrSv-w">Spotify</a>
