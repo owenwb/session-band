@@ -63,10 +63,21 @@
 <a class="relative pb-1 border-b-2 border-transparent hover:opacity-70 transition-all duration-300" href="booking-code.html">BOOKING</a>
 </div>
 <div class="md:hidden">
+<button id="mobile-menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
 <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<div id="mobile-menu" class="hidden fixed top-24 left-0 w-full bg-black border-b-4 border-white z-[79] md:hidden">
+<div class="flex flex-col px-6 py-8 space-y-6 font-black uppercase text-sm tracking-[0.25em]">
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="index.html">HOME</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="index.html#about">ABOUT</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="shows-code.html">MUSIC</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="shows-code.html#gigs">SHOWS</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="booking-code.html">BOOKING</a>
+</div>
+</div>
 <section class="relative overflow-hidden pt-20 pb-24 industrial-grid border-b border-white/10">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid lg:grid-cols-2 gap-16 items-center">
