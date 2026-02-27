@@ -76,10 +76,21 @@
 <a class="nav-link border-b-2 border-transparent pb-1" href="booking-code.html">BOOKING</a>
 </div>
 <div class="md:hidden">
+<button id="mobile-menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
 <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<div id="mobile-menu" class="hidden fixed top-24 left-0 w-full bg-black border-b-4 border-white z-[79] md:hidden">
+<div class="flex flex-col px-6 py-8 space-y-6 font-black uppercase text-sm tracking-[0.25em]">
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="index.html">HOME</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="index.html#about">ABOUT</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="shows-code.html">MUSIC</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="shows-code.html#gigs">SHOWS</a>
+<a onclick="document.getElementById('mobile-menu').classList.add('hidden')" href="booking-code.html">BOOKING</a>
+</div>
+</div>
 <header class="hero-gritty min-h-screen flex items-center justify-center text-center px-6 relative" id="home">
 <div class="max-w-6xl w-full pt-24">
 <div class="inline-block border-2 border-white px-6 py-2 mb-10">
@@ -205,37 +216,28 @@
 <p class="mt-16 text-black/40 font-black uppercase tracking-[0.4em] text-sm">FESTIVALS • CONCERT HALLS • PRIVATE TOURS</p>
 </div>
 </section>
-<footer class="py-32 bg-black border-t border-white/10 relative z-10">
+<footer class="py-24 bg-black border-t-8 border-white relative z-10">
 <div class="max-w-7xl mx-auto px-6">
-<div class="grid md:grid-cols-4 gap-16 items-start">
-<div class="md:col-span-2">
-<div class="flex flex-col mb-8">
-<span class="text-4xl font-black tracking-tighter leading-none">THE SESSION</span>
-<span class="text-[10px] font-black tracking-[0.5em] uppercase text-white mt-2">BORN AND BRED COVENTRY</span>
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-12 md:mb-0 text-center md:text-left">
+<span class="text-5xl font-black tracking-tighter leading-none uppercase">The Session</span>
+<p class="mt-4 text-accent-grey font-bold uppercase tracking-widest text-xs max-w-xs">Industrial Rock • Coventry • Est. 2002</p>
+<p class="mt-2 text-white font-black uppercase tracking-[0.3em] text-[10px]">MADE IN THE MIDLANDS</p>
 </div>
-<p class="text-accent-grey text-sm font-bold tracking-widest uppercase leading-relaxed max-w-sm">
-                        Original Irish Rock forged in the Midlands since 2002. Authenticity at high volume.
-                    </p>
+<div class="flex flex-col items-center md:items-end">
+<div class="flex space-x-8 mb-10">
+<a class="text-white hover:text-zinc-500 transition-colors" href="https://www.instagram.com/_thesession/" target="_blank">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.366.333-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.347-2.618-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a class="text-white hover:text-zinc-500 transition-colors" href="https://www.facebook.com/THESESSION/" target="_blank">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-white hover:text-zinc-500 transition-colors" href="https://open.spotify.com/artist/3jqvrt1w1FE5AfcHAr6qJ5" target="_blank">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.5c-.14.22-.43.29-.65.15-2.81-1.72-6.35-2.11-10.51-1.16-.25.06-.5-.1-.56-.35-.06-.25.1-.5.35-.56 4.55-1.04 8.46-.59 11.57 1.31.22.14.29.43.15.65zm1.47-3.3c-.18.29-.55.38-.84.21-3.21-1.97-8.11-2.54-11.91-1.39-.32.1-.66-.08-.76-.41-.1-.32.08-.66.41-.76 4.35-1.32 9.75-.68 13.43 1.58.3.18.39.55.21.84zm.12-3.41c-3.85-2.29-10.21-2.5-13.93-1.37-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.28-1.3 11.31-1.04 15.74 1.59.53.31.71 1 .4 1.53-.31.53-1 .71-1.53.4z"></path></svg>
+</a>
 </div>
-<div class="flex flex-col gap-6">
-<span class="text-white font-black text-sm tracking-[0.3em]">NAVIGATE</span>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#home">Home</a>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#about">About</a>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Music</a>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#booking">Booking</a>
-</div>
-<div class="flex flex-col gap-6">
-<span class="text-white font-black text-sm tracking-[0.3em]">RESOURCES</span>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Press Kit</a>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Technical Rider</a>
-<a class="text-accent-grey hover:text-white transition-colors font-black uppercase text-[11px] tracking-[0.2em]" href="#">Privacy</a>
+<p class="text-[10px] font-black uppercase tracking-[0.5em] text-zinc-600">© 2026 The Session • Built in Coventry</p>
 </div>
 </div>
-<div class="mt-32 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="text-accent-grey text-[10px] uppercase font-black tracking-[0.3em]">
-                    © 2024 THE SESSION BAND. ALL RIGHTS RESERVED.
-                </p>
-<div class="flex space-x-8">
-<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://www.instagram.com/_thesession/">Instagram</a>
-<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://www.facebook.com/THESESSION/?locale=en_GB">Facebook</a>
-<a class="text-white font-black uppercase text-[10px] tracking-widest hover:underline" href="https://open.spotify.com/artist/3jqvrt1w1FE5AfcHAr6qJ5?si=3JA9baSgThylGwRJCrSv-w">Spotify</a>
+</div>
+</footer>
